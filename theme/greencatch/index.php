@@ -44,7 +44,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 							?>
                             <div class="pagenavi"><?php pagenavi(); ?></div>
             <div class="clear"></div>
-            <div class="footer">COPYRIGHT &copy; <a href="">IM050.COM</a> | THEME BY <a href="">MEMORY</a></div>
+            <div class="footer">COPYRIGHT &copy; <a href="">Bigqiu.ml</a> | THEME BY <a href="">Fss</a></div>
         </div>
         <?php get_sidebar(); ?>
         

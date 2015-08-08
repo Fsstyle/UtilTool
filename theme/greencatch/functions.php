@@ -211,4 +211,12 @@ show_admin_bar(false);
 add_action('init','df_disable_admin_bar');
 //Enable link manager
 add_filter( 'pre_option_link_manager_enabled', '__return_true' );
+
+add_filter( 'avatar_defaults', 'newgravatar' );  
+function newgravatar ($avatar_defaults) {  
+    $myavatar = get_bloginfo('template_directory') . '/images/face.jpg';  
+    $avatar_defaults[$myavatar] = "默认头像";  
+    return $avatar_defaults;  
+}
+
 ?>
