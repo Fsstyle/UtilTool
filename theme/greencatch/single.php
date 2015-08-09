@@ -24,7 +24,7 @@
             <?php
 			endwhile;
 			?>
-            <div class="footer">COPYRIGHT &copy; <a href="">Bigqiu.ml</a> | THEME BY <a href="">Fss</a></div>
+            <div class="footer">COPYRIGHT &copy; <a href="">Bigqiu.ml</a> | THEME BY <a href="">Bigqiu</a></div>
         </div>
         <?php get_sidebar(); ?>
     </div>
