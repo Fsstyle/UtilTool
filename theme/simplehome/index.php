@@ -47,7 +47,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 		?>
 			<div class="pagenavi"><?php pagenavi(); ?></div>
             <div class="clear"></div>
-            <div class="footer">COPYRIGHT &copy; <a href="http://www.bigqiu.ml/">BIGQIU.ML</a> | THEME BY <a href="http://www.im050.com/">BIGQIU</a></div>
+            <div class="footer">COPYRIGHT &copy; <a href="http://www.bigqiu.ml/">BIGQIU.ML</a> | THEME BY <a href="http://www.bigqiu.ml/">BIGQIU</a></div>
         </div>
         <?php get_sidebar(); ?>
     </div>
