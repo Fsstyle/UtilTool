@@ -42,7 +42,6 @@ $smilies='
 <a href="javascript:grin(\':cry:\')"    ><img src="'.get_template_directory_uri().'/smilies/icon_cry.gif"       alt="" /></a>
 <a href="javascript:grin(\':mrgreen:\')"><img src="'.get_template_directory_uri().'/smilies/icon_mrgreen.gif"   alt="" /></a>
 ';
-//comment_form($args);
 ?>
 <div id="respond" class="respond">
 		<form action="" method="post" id="commentform" class="comment-form">
