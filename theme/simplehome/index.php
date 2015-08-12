@@ -10,7 +10,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 		global $query_string;
 		query_posts($query_string.'&orderby=id');
 		if ( have_posts() ) : while ( have_posts() ) : the_post();
-			if (get_post_format() == 'aside') {
+			if (get_post_format() == 'aside' || get_post_format() == 'audio') {
 				//日志型文章
 				include('article-aside.php');
 			} else {
@@ -47,7 +47,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 		?>
 			<div class="pagenavi"><?php pagenavi(); ?></div>
             <div class="clear"></div>
-            <div class="footer">COPYRIGHT &copy; <a href="http://www.bigqiu.ml/">BIGQIU.ML</a> | THEME BY <a href="http://www.bigqiu.ml/">BIGQIU</a></div>
+            <div class="footer">COPYRIGHT &copy; <a href="http://www.bigqiu.ml/">BIGQIU.ML</a></div>
         </div>
         <?php get_sidebar(); ?>
     </div>

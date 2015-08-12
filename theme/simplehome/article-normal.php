@@ -1,5 +1,8 @@
 			<article class="article">
-                <?php
+                <h1><a href="<?php the_permalink(); ?>" title="<?php the_title();?>" alt="<?php the_title();?>"><?php the_title(); ?></a></h1>
+                
+                <div class="content">
+				<?php
                 if (get_post_meta($post->ID, "music_url_value", true)) {
                 ?>
                 <!-- music format -->
@@ -22,17 +25,25 @@
                 <!-- video format -->
                 <div class="post-format-video">
                     	<div class="mejs-mediaelement">
+						<!-- bilibili -->
                         <?php
-							if (strpos(get_post_meta($post->ID, "video_url_value", true), '.swf') !== strlen(get_post_meta($post->ID, "video_url_value", true))-4) {
+							if (stripos(get_post_meta($post->ID, "video_url_value", true), 'hdslb.com') !== false) {
+						?>
+							<embed src="<?=(get_post_meta($post->ID, "video_url_value", true))?>" quality="high" width="100%" height="100%" align="middle" allowScriptAccess="never" allowFullScreen="true" flashvars="playMovie=true&auto=1" pluginspage="http://get.adobe.com/cn/flashplayer/" wmode="transparent" type="application/x-shockwave-flash"></embed>					
+                        <!-- youku -->
+						<?php
+							} else if (stripos(get_post_meta($post->ID, "video_url_value", true), 'youku.com') !== false) {
+						?>
+							<p style="text-align: center;">
+								<embed src="<?=(get_post_meta($post->ID, "video_url_value", true))?>" quality="high" width="100%" height="100%" align="middle" allowScriptAccess="never" allowFullScreen="true" allowNetworking="internal" autostart="0" type="application/x-shockwave-flash"></embed>
+							</p>  
+						<?php
+							} else {
 						?>
 							<video class="wp-video-shortcode" style="width:100%;height:100%;" controls="controls" >
 							<source src="<?=(get_post_meta($post->ID, "video_url_value", true))?>" type="video/mp4" />
 							</video>
-                        <?php
-							} else {
-						?>
-                        	<embed src="<?=(get_post_meta($post->ID, "video_url_value", true))?>" quality="high" width="100%" height="100%" align="middle" allowScriptAccess="always" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash"></embed>
-                        <?php
+						<?php
 							}
 						?>
 						</div>
@@ -44,9 +55,6 @@
                 </div>
 				<?php }
 				}?>
-                <h1><a href="<?php the_permalink(); ?>" title="<?php the_title();?>" alt="<?php the_title();?>"><?php the_title(); ?></a></h1>
-                
-                <div class="content">
                 <?php
 					if (is_single() || is_page()) {
 				?>
