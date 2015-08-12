@@ -64,7 +64,7 @@ get_header();
                 wp_reset_query();
             ?>
                 <div class="clear"></div>
-                <div class="footer">COPYRIGHT &copy; <a href="http://www.bigqiu.ml/">BIGQIU.ML</a> | THEME BY <a href="http://www.im050.com/">BIGQIU</a></div>
+                <div class="footer">COPYRIGHT &copy; <a href="http://www.bigqiu.ml/">BIGQIU.ML</a> | THEME BY <a href="http://www.bigqiu.ml/">BIGQIU</a></div>
             </div>
             <?php get_sidebar(); ?>
         </div>
