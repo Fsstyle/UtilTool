@@ -22,8 +22,9 @@ function simplehome_setup() {
 	 * Enable support for Post Thumbnails on posts and pages
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-	 */
-	add_theme_support( 'post-thumbnails' );
+		add_theme_support( 'post-thumbnails' );
+	*/
+	add_theme_support('post-thumbnails', array('post'));
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
@@ -367,6 +368,29 @@ function shortcode_button($atts, $content = null) {
 	return '<span class="button btn-'.$color.'"><a href="'.$href.'" target="'.$target.'">'.$content.'</a></span>';
 }
 add_shortcode('button','shortcode_button');
+
+if(function_exists( 'add_theme_support' )) {
+	add_theme_support('post-thumbnails'); 
+}
+
+function autoset_featured() {
+          global $post;
+          $already_has_thumb = has_post_thumbnail($post->ID);
+              if (!$already_has_thumb)  {
+              $attached_image = get_children( "post_parent=$post->ID&post_type=attachment&post_mime_type=image&numberposts=1" );
+                          if ($attached_image) {
+                                foreach ($attached_image as $attachment_id => $attachment) {
+                                set_post_thumbnail($post->ID, $attachment_id);
+                                }
+                           }
+                        }
+      }  //end function
+add_action('the_post', 'autoset_featured');
+add_action('save_post', 'autoset_featured');
+add_action('draft_to_publish', 'autoset_featured');
+add_action('new_to_publish', 'autoset_featured');
+add_action('pending_to_publish', 'autoset_featured');
+add_action('future_to_publish', 'autoset_featured');
 
 /* Theme option */
 include('includes/admin/init.php');

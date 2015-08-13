@@ -49,9 +49,9 @@
 						</div>
                 </div>
 				<?php } else { ?>
-            	<?php if ( has_post_thumbnail() ) { ?>
+            	<?php if ( has_post_thumbnail() && !(is_single() || is_page()) ) { ?>
                 <div class="feature-img">
-                	<a href="<?php the_permalink(); ?>" title="<?php the_title();?>" alt="<?php the_title();?>"><?php the_post_thumbnail(); ?></a>
+                	<a href="<?php the_permalink(); ?>" title="<?php the_title();?>" alt="<?php the_title();?>"><?php the_post_thumbnail('medium'); ?></a>
                 </div>
 				<?php }
 				}?>
