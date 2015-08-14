@@ -29,7 +29,7 @@
                         <?php
 							if (stripos(get_post_meta($post->ID, "video_url_value", true), 'hdslb.com') !== false) {
 						?>
-							<embed src="<?=(get_post_meta($post->ID, "video_url_value", true))?>" quality="high" width="100%" height="100%" align="middle" allowScriptAccess="never" allowFullScreen="true" flashvars="playMovie=true&auto=1" pluginspage="http://get.adobe.com/cn/flashplayer/" wmode="transparent" type="application/x-shockwave-flash"></embed>					
+							<embed src="<?=(get_post_meta($post->ID, "video_url_value", true))?>" quality="high" width="100%" height="100%" align="middle" allowScriptAccess="never" allowFullScreen="true" flashvars="playMovie=true&auto=0" autostart="0" pluginspage="http://get.adobe.com/cn/flashplayer/" wmode="transparent" type="application/x-shockwave-flash"></embed>					
                         <!-- youku -->
 						<?php
 							} else if (stripos(get_post_meta($post->ID, "video_url_value", true), 'youku.com') !== false) {
