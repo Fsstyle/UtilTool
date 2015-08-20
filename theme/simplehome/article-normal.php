@@ -36,7 +36,14 @@
 						?>
 							<p style="text-align: center;">
 								<embed src="<?=(get_post_meta($post->ID, "video_url_value", true))?>" quality="high" width="100%" height="100%" align="middle" allowScriptAccess="never" allowFullScreen="true" allowNetworking="internal" autostart="0" type="application/x-shockwave-flash"></embed>
-							</p>  
+							</p>
+						<!-- video.qq.com -->	
+						<?php
+							} else if (stripos(get_post_meta($post->ID, "video_url_value", true), 'video.qq.com') !== false) {
+						?>
+							<p style="text-align: center;">
+								<embed src="<?=(get_post_meta($post->ID, "video_url_value", true))?>" allowFullScreen="true" quality="high" width="100%" 		height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+							</p>
 						<?php
 							} else {
 						?>
