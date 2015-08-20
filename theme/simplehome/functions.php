@@ -392,6 +392,20 @@ add_action('new_to_publish', 'autoset_featured');
 add_action('pending_to_publish', 'autoset_featured');
 add_action('future_to_publish', 'autoset_featured');
 
+//使用smtp发送邮件，笔者用的是QQ邮箱，你可以参照你使用的邮箱具体设置SMTP 
+add_action('phpmailer_init', 'mail_smtp'); 
+function mail_smtp( $phpmailer ) { 
+	$phpmailer->FromName = 'BigQiu'; //发件人 
+	$phpmailer->Host = 'smtp.qq.com'; //修改为你使用的SMTP服务器 
+	$phpmailer->Port = 25; //SMTP端口 
+	$phpmailer->Username = '89404697@qq.com'; //邮箱账户 
+	$phpmailer->Password = '2015code'; //邮箱密码 
+	$phpmailer->From = '89404697@qq.com'; //你的邮箱 
+	$phpmailer->SMTPAuth = true; 
+	$phpmailer->SMTPSecure = ''; //tls or ssl （port=25留空，465为ssl） 
+	$phpmailer->IsSMTP(); 
+}
+
 /* Theme option */
 include('includes/admin/init.php');
 
