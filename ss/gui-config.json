@@ -1,39 +1,6 @@
 {
 	"configs" : [
 		{
-			"server" : "mga.catt.cc",
-			"server_port" : 59012,
-			"password" : "BxMiV7mV",
-			"method" : "rc4-md5",
-			"remarks" : "",
-			"tcp_over_udp" : false,
-			"udp_over_tcp" : false,
-			"obfs_tcp" : false,
-			"obfs_udp" : true
-		},
-		{
-			"server" : "hk.cccat.cc",
-			"server_port" : 51942,
-			"password" : "awSDQ22F",
-			"method" : "aes-256-cfb",
-			"remarks" : "",
-			"tcp_over_udp" : false,
-			"udp_over_tcp" : false,
-			"obfs_tcp" : false,
-			"obfs_udp" : true
-		},
-		{
-			"server" : "sg2.cccat.cc",
-			"server_port" : 51942,
-			"password" : "awSDQ22F",
-			"method" : "aes-256-cfb",
-			"remarks" : "",
-			"tcp_over_udp" : false,
-			"udp_over_tcp" : false,
-			"obfs_tcp" : false,
-			"obfs_udp" : true
-		},
-		{
 			"server" : "sg.cccat.cc",
 			"server_port" : 51942,
 			"password" : "awSDQ22F",
@@ -61,17 +28,6 @@
 			"password" : "awSDQ22F",
 			"method" : "aes-256-cfb",
 			"remarks" : "",
-			"tcp_over_udp" : false,
-			"udp_over_tcp" : false,
-			"obfs_tcp" : false,
-			"obfs_udp" : true
-		},
-		{
-			"server" : "128.199.244.135",
-			"server_port" : 50071,
-			"password" : "FxJq7JQ6",
-			"method" : "aes-256-cfb",
-			"remarks" : "Digital Ocean的新加坡节点",
 			"tcp_over_udp" : false,
 			"udp_over_tcp" : false,
 			"obfs_tcp" : false,
@@ -111,28 +67,6 @@
 			"obfs_udp" : false
 		},
 		{
-			"server" : "us-b.cccat.cc",
-			"server_port" : 9001,
-			"password" : "cccat",
-			"method" : "aes-256-cfb",
-			"remarks" : "us-b",
-			"tcp_over_udp" : false,
-			"udp_over_tcp" : false,
-			"obfs_tcp" : false,
-			"obfs_udp" : false
-		},
-		{
-			"server" : "us-a.cccat.cc",
-			"server_port" : 9001,
-			"password" : "cccat",
-			"method" : "aes-256-cfb",
-			"remarks" : "us-a",
-			"tcp_over_udp" : false,
-			"udp_over_tcp" : false,
-			"obfs_tcp" : false,
-			"obfs_udp" : false
-		},
-		{
 			"server" : "us-c.cccat.cc",
 			"server_port" : 9001,
 			"password" : "cccat",
@@ -144,18 +78,7 @@
 			"obfs_udp" : false
 		},
 		{
-			"server" : "hk4.cccat.cc",
-			"server_port" : 51942,
-			"password" : "awSDQ22F",
-			"method" : "aes-256-cfb",
-			"remarks" : "HongKong 04",
-			"tcp_over_udp" : false,
-			"udp_over_tcp" : false,
-			"obfs_tcp" : false,
-			"obfs_udp" : false
-		},
-		{
-			"server" : "jp.doubigjd.com",
+			"server" : "jp.doubi.date",
 			"server_port" : 50071,
 			"password" : "FxJq7JQ6",
 			"method" : "aes-256-cfb",
@@ -166,18 +89,7 @@
 			"obfs_udp" : false
 		},
 		{
-			"server" : "hk2.doubigjd.com",
-			"server_port" : 50071,
-			"password" : "FxJq7JQ6",
-			"method" : "aes-256-cfb",
-			"remarks" : "hk2.doubigjd",
-			"tcp_over_udp" : false,
-			"udp_over_tcp" : false,
-			"obfs_tcp" : false,
-			"obfs_udp" : false
-		},
-		{
-			"server" : "jp2.doubigjd.com",
+			"server" : "jp2.doubi.date",
 			"server_port" : 50071,
 			"password" : "FxJq7JQ6",
 			"method" : "aes-256-cfb",
@@ -188,19 +100,30 @@
 			"obfs_udp" : false
 		},
 		{
-			"server" : "hk.doubigjd.com",
-			"server_port" : 50071,
-			"password" : "FxJq7JQ6",
+			"server" : "au.cccat.cc",
+			"server_port" : 51942,
+			"password" : "awSDQ22F",
 			"method" : "aes-256-cfb",
-			"remarks" : "hk.doubigjd",
+			"remarks" : "Melbourne, AU",
+			"tcp_over_udp" : false,
+			"udp_over_tcp" : false,
+			"obfs_tcp" : false,
+			"obfs_udp" : false
+		},
+		{
+			"server" : "sg-a.cccat.cc",
+			"server_port" : 9001,
+			"password" : "cccat",
+			"method" : "aes-256-cfb",
+			"remarks" : "",
 			"tcp_over_udp" : false,
 			"udp_over_tcp" : false,
 			"obfs_tcp" : false,
 			"obfs_udp" : false
 		}
 	],
-	"index" : 17,
-	"random" : true,
+	"index" : 2,
+	"random" : false,
 	"global" : false,
 	"enabled" : true,
 	"shareOverLan" : false,
